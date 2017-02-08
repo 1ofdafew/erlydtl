@@ -577,7 +577,9 @@ rjust(Input, Number) ->
     string:right(Input, Number).
 
 satoshi(Input) ->
-    stringformat(Input/100000000, ".8f").
+%%    io:format("Input: ~p~n", [Input]),
+%%    stringformat(Input/100000000, ".8f").
+    stringformat(Input, ".8f").
 
 %% @doc Returns a slice of the list.
 slice(Input, Index) when is_binary(Input) ->
